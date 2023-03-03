@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+
+
+.models{
+    padding-top: 60px;
+    width: 100vw;
+    height: max-content;
+    margin: 0px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+        
+
+    .modelsPath {
+        display: flex;
+        align-items: center;
+        margin: 15px auto 0px 30px;
+    }
+
+        .modelsPath a  {
+            font-size: 14px !important;
+            color: #555 !important;
+            text-decoration: none !important;
+            transition: all .3s;
+        }
+
+
+        .modelsPath a:hover {
+            color: #022a81 !important;
+        }
+
+        .modelsNextIcon{
+            font-size: 18px !important;
+            margin: 0px 1px !important;
+        }
+
+
+
+
+
+
+
+
+
+
+
+    .modelsTitleBox{
+        font-size: 16px;
+        margin: 40px auto 40px auto;
+        font-family: 'Roboto Slab', serif;
+        letter-spacing: 1px;
+    }
+
+
+
+    .modelsBox{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        /* justify-content: space-between; */
+    }
+
+        .models__item{
+            height: max-content;
+            margin-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none !important;
+            position: relative;
+            width: calc(50% - 20px);
+            padding: 0px 10px;
+
+        }
+            .models__image{
+                /* width: 100%; */
+                max-height: 150px;
+                max-width: 150px;
+                transition: all .4s;
+
+                transform: translateY(10px);
+                z-index: -1;
+            }
+
+            .models__item:hover .models__image{
+                transform: translateY(0px);
+            }
+
+            .models__name{
+                color: #111;
+                transition: all .4s;
+                font-size: 12px;
+                font-weight: 600;
+                margin-top: 15px;
+            }
+
+            .models__item:hover .models__name{
+                color: #185DAA !important;
+            }
+
+            
+            .models__shadow{
+                -webkit-transform: translateY(5px);
+                transform: translateY(5px);
+                pointer-events: none;
+                z-index: 1;
+                content: '';
+                height: 10px;
+                width: 90%;
+                opacity: 0;
+
+
+                background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, transparent 80%);
+                background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, transparent 80%);
+                transition: all .5s;
+            }
+
+
+            .models__item:hover .models__shadow{
+                opacity: .7 !important;
+                display: block;
+                -webkit-transform: translateY(0px);
+                transform: translateY(0px);
+            }
+
+            .models__price {
+                font-size: 16px;
+                margin-top: 5px;
+                color: red;
+                font-weight: bold;
+            }
+
+
+@media (min-width: 550px){
+    .models__image{
+        max-width: 180px;
+        max-height: 180px;
+    }
+
+    .models__name{
+        font-size: 14px;
+    }
+    .modelsTitleBox{
+        font-size: 21px !important;
+    }
+}
+
+
+        
+/* @media (max-width: 767px){
+    .modelsBox{
+        width: 100%;
+    }
+    .models__item {
+        width: calc(50% - 30px) !important;
+        padding: 0px 15px;
+    }
+} */
+
+@media (min-width: 768px){
+    .modelsBox{
+        width: 750px;
+    }
+
+    .models__item{
+        width: calc(100% / 3 - 30px) !important;
+        margin-bottom: 60px;
+        padding: 0 15px;
+    
+    }
+
+}
+
+@media (min-width: 992px){
+    .modelsBox{
+        width: 970px;
+    }
+    .modelsTitleBox{
+        font-size: 32px !important;
+    }
+}
+
+@media (min-width: 1200px){
+    .modelsBox{
+        width: 1170px
+    }
+
+    .models__item{
+        /* width: calc(100% / 4) !important; */
+        margin-bottom: 80px !important;
+    }
+
+    /* .models__item{
+        margin-bottom: 45px !important;
+    } */
+}
